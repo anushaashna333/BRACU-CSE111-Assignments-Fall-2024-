@@ -1,16 +1,114 @@
 //Lab-2 file link:  https://docs.google.com/document/d/1AoVsJ1zgNCH0xiUSMlTVIAZjm-rnTFoyEv1m6BhTAWE/edit?tab=t.0 
 
-//Task-1
+// I made 2 files for each of these tasks.
 
+//Task-1
+public class University{
+    public String name;
+    public String country;
+}
+
+//package Lab-2;
+
+public class UniversityTester {
+    public static void main (String[]args){
+        University uni1 = new University();
+        University uni2 = new University();
+
+        //1(a)
+        System.out.println("location of uni1: "+uni1);
+        System.out.println("location of uni2: "+uni2);
+        if(uni1==uni2){
+            System.out.println("Both the objects are in same location");
+        }
+        else{
+            System.out.println("Both the objects are not in same location");
+        }
+
+        //1(b)
+        uni1.name = "Imperial College London";
+        uni1.country = "England";
+        uni2.name = "Brac University";
+        uni2.country = "Bangladesh";
+        System.out.println("Both objects are of same value");
+        if((uni1.name!=null && uni1.country!=null)||(uni2.name!=null && uni2.country!=null)){
+            System.out.println(uni1.name +"\n"+uni1.country +"\n"+uni2.name +"\n"+uni2.country );
+        }
+        else{
+            System.out.println("Both objects have not changed");
+        }
+        if(uni1.name.equals(uni2.name) && uni1.country.equals(uni2.country)){
+            System.out.println("Both objects are of same value");
+        }
+        else{
+            System.out.println("Both objects are not of same value");
+        }
+    }
+}
 
 //Task-2
 
+public class Student {
+    String name;
+    int id;
+}
+
+public class StudentTester1 {
+    public static void main(String[]args){
+        Student s1 = new Student();
+        System.out.println("Name of the Student: "+s1.name);
+        System.out.println("ID of the Student: "+s1.id);
+        s1.name = "Bob";
+        s1.id = 123;
+        System.out.println("Name of the Student: "+s1.name);
+        System.out.println("ID of the Student: "+s1.id);
+
+    }
+}
 
 //Task-3
 
+public class CSECourse {
+    public String courseName = "Programming Language II";
+    public String courseCode = "CSE111";
+    public int credit = 3;
+}
+
+public class CourseTester{
+  public static void main(String args []){
+    CSECourse c1 = new CSECourse();
+    System.out.println("Course Name: "+c1.courseName);
+    System.out.println("Course Code: "+c1.courseCode);
+    System.out.println("Credit: "+c1.credit);
+   }
+}
 
 //Task-4
 
+public class ImaginaryNumber {
+    public int realPart;
+    public int imaginaryPart;
+    public void printNumber(){
+        System.out.println(realPart+ " + "+ imaginaryPart+"i");
+    }
+}
+
+public class Tester6 {
+    public static void main(String [] args){
+     ImaginaryNumber num1 = new ImaginaryNumber();
+     num1.printNumber();
+     System.out.println("1********");
+     num1.realPart=3;
+     num1.imaginaryPart=7;
+     num1.printNumber();
+     System.out.println("2********");
+     ImaginaryNumber num2 = new ImaginaryNumber();
+     num2.realPart=1;
+     num2.imaginaryPart=9;
+     num2.printNumber();
+    }
+
+}
 
 //Task-5
 
